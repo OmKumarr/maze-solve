@@ -118,7 +118,7 @@ def a_star(maze, start, goal):
             nx, ny = neighbor
             if 0 <= nx < len(maze) and 0 <= ny < len(maze[0]) and maze[nx][ny] == 0:
                 new_cost = current_cost + 1
-                if neighbor not in visited or new_cost < visited[neighbor]]:
+                if neighbor not in visited or new_cost < visited[neighbor]:
                     visited[neighbor] = new_cost
                     priority = new_cost + heuristic(neighbor, goal)
                     heapq.heappush(pq, (priority, new_cost, neighbor))
